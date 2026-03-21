@@ -1,0 +1,8 @@
+int2tf32(2147483647) = 0x237ff
+tf322int(0x7ffff) = -2147483648
+double2tf32(1.000000e+40) = 0x3fc00
+tf322double(0x7fc00) = -inf (0xfff0000000000000)
+tf32_add(0x3fc00, 0x7fc00) = 0x7ffff
+tf32_mul(0x3fc00, 0x00000) = 0x7ffff
+tf32_div(0x3fc00, 0x3fc00) = 0x7ffff (nan)
+tf32_compare(0x00000, 0x40000) = 0
